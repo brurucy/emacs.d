@@ -35,10 +35,6 @@
   (setq consult-project-root-function #'projectile-project-root)
   (add-hook 'completion-list-mode-hook #'consult-preview-at-point-mode))
 
-(use-package consult-lsp
-  :straight t
-  :after (consult lsp))
-
 (use-package consult-flycheck
   :straight t
   :after(consult lsp))
@@ -50,11 +46,6 @@
 (use-package multiple-cursors
   :straight t
   :defer t)
-
-(use-package undo-tree
-  :straight t
-  :config
-  (global-undo-tree-mode))
 
 (setq indent-tabs-mode nil)
 

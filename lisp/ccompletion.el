@@ -23,31 +23,3 @@
 	 ("C-s" . nil)
 	 ([remap scroll-down-command] . nil)
 	 ([remap complete-symbol] . nil)))
-
-(use-package yasnippet-snippets
-  :straight t
-  :defer t)
-
-(use-package yasnippet
-  :straight t
-  :after (yasnippet-snippets company-mode)
-  :config
-  (yas-reload-all))
-
-(use-package lsp-mode
-  :after company
-  :straight t
-  :custom
-  (lsp-log-io nil)
-  (lsp-restart 'auto-restart)
-  :config
-  (setq lsp-auto-configure t)
-  (setq lsp-enable-snippet nil)
-  (setq lsp-enable-semantic-highlighting nil)
-  (setq lsp-enable-links nil)
-  (setq lsp-diagnostics-provider :none)
-  (add-hook 'lsp-after-open-hook (lambda () (setq company-backends (remove 'company-capf company-backends)))))
-
-(use-package lsp-ui
-  :straight t
-  :after (lsp lsp-treemacs))

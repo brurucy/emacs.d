@@ -38,8 +38,6 @@
   :straight t
   :init (exec-path-from-shell-initialize))
 
-(setq exec-path (append exec-path '("~/.local/share/nvm/v12.22.3/bin/node")))
-
 (setq package-enable-at-startup nil)
 
 (use-package esup
@@ -55,25 +53,11 @@
 (load "~/.emacs.d/lisp/ccompletion.el")
 ;; Consult + magit and else
 (load "~/.emacs.d/lisp/common_utilities.el")
-;; Js stuff
-;; (load "~/.emacs.d/lisp/js.el")
-;; Groovy Stuff
-;; (load "~/.emacs.d/lisp/groovy.el")
-;; Go Stuff
-;; (load "~/.emacs.d/lisp/golang.el")
-;; Rust
-;; (load "~/.emacs.d/lisp/rust.el")
-;; Python
-;; (load "~/.emacs.d/lisp/python.el")
 ;; Coq
-(load "~/.emacs.d/lisp/coq.el")
+;;(load "~/.emacs.d/lisp/coq.el")
 ;; Latex
 (load "~/.emacs.d/lisp/latex.el")
-;; Org stuff
-(load "~/.emacs.d/lisp/org_extensions.el")
 ;; DSL stuff
 (load "~/.emacs.d/lisp/dsls.el")
-;; Elisp
-(load "~/.emacs.d/lisp/elisp.el")
 ;; Nix
 (load "~/.emacs.d/lisp/nix.el")
