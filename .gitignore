@@ -1,0 +1,10 @@
+eln-cache/*
+.cache/*
+auto-save-list/*
+elpa/*
+eshell/*
+org-roam.db/*
+projectile-bookmarks.eld
+straight/*
+transient/*
+var/*

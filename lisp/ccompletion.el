@@ -1,25 +1,34 @@
-(use-package company
+(use-package corfu
   :straight t
+  :custom
+  (corfu-auto t)
+  :init
+  (global-corfu-mode))
+
+;; Add extensions
+(use-package cape
+  :straight t
+  :init
+  ;; Add `completion-at-point-functions', used by `completion-at-point'.
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  ;;(add-to-list 'completion-at-point-functions #'cape-history)
+  ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+  ;;(add-to-list 'completion-at-point-functions #'cape-tex)
+  ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
+  ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
+  ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
+  ;;(add-to-list 'completion-at-point-functions #'cape-ispell)
+  ;;(add-to-list 'completion-at-point-functions #'cape-dict)
+  ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
+  ;;(add-to-list 'completion-at-point-functions #'cape-line)
+  )
+
+(use-package kind-icon
+  :straight t
+  :ensure t
+  :after corfu
+  :custom
+  (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
-  (setq company-idle-overlay 0.15)
-  (setq company-minimum-prefix-length 1)
-  (setq company-tooltip-minimum company-tooltip-limit)
-  (setq company-show-numbers t)
-  (setq company-require-match nil)
-  (setq company-eclim-auto-save nil)
-  (setq company-dabbrev-other-buffers nil)
-  (setq company-dabbrev-ignore-case nil)
-  (setq company-dabbrev-downcase nil)
-  (setq company-tooltip-align-annotations t)
-  (setq company-backends '((:separate company-yasnippet company-capf)))
-  (add-hook 'emacs-lisp-mode-hook #'company-mode)
-  (add-hook 'emacs-lisp-mode-hook #'yas-minor-mode)
-  :bind (:filter company-mode
-	 ([remap completion-at-point] . #'company-manual-begin)
-         ([remap complete-symbol] . #'company-manual-begin)
-	 :map company-active-map
-	 ("<tab>" . #'company-complete-selection)
-         ("TAB" . #'company-complete-selection)
-	 ("C-s" . nil)
-	 ([remap scroll-down-command] . nil)
-	 ([remap complete-symbol] . nil)))
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))

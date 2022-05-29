@@ -47,16 +47,24 @@
 (load "~/.emacs.d/lisp/visuals.el")
 ;; General Completion
 (load "~/.emacs.d/lisp/completion.el")
+;; Lsp
+(load "~/.emacs.d/lisp/lsp.el")
 ;; Syntax Highlighting
 (load "~/.emacs.d/lisp/highlighting.el")
 ;; General Code Completion
 (load "~/.emacs.d/lisp/ccompletion.el")
 ;; Consult + magit and else
 (load "~/.emacs.d/lisp/common_utilities.el")
+;; Scheme
+(load "~/.emacs.d/lisp/scheme.el")
 ;; Coq
 ;;(load "~/.emacs.d/lisp/coq.el")
+;; Go
+(load "~/.emacs.d/lisp/go.el")
+;; Rust
+(load "~/.emacs.d/lisp/rust.el")
 ;; Latex
-(load "~/.emacs.d/lisp/latex.el")
+;; (load "~/.emacs.d/lisp/latex.el")
 ;; DSL stuff
 (load "~/.emacs.d/lisp/dsls.el")
 ;; Nix

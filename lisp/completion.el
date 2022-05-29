@@ -1,5 +1,5 @@
 (use-package selectrum
-  :straight (:host github :repo "raxod502/selectrum")
+  :straight (:host github :repo "radian-software/selectrum")
   :defer t
   :init
   (selectrum-mode +1)
@@ -14,11 +14,9 @@
   (setq prescient-history-length 1000))
 
 (use-package selectrum-prescient
-  :straight (:host github :repo "raxod502/prescient.el"
+  :straight (:host github :repo "radian-software/prescient.el"
 		   :files ("selectrum-prescient.el"))
   :demand t
   :after selectrum
   :config
   (selectrum-prescient-mode +1))
-
-

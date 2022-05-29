@@ -1,4 +1,7 @@
-(use-package flycheck
-  :straight t
-  :config
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+(use-package tree-sitter
+  :straight t)
+
+(use-package tree-sitter-langs
+  :straight t)
+
+(global-tree-sitter-mode)
