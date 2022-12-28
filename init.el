@@ -54,10 +54,11 @@
     "highlighting.el"
     "ccompletion.el"
     "common_utilities.el"
-    "go.el"
+    ;; "go.el"
     "rust.el"
     "dsls.el"
     "nix.el"
-    "js.el"
+    ;; "js.el"
     "haskell.el"
+    "latex.el"
     )))

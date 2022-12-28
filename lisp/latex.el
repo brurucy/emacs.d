@@ -9,7 +9,6 @@
   :straight t
   :defer t
   :config
-  (add-hook 'LaTeX-mode-hook #'LaTeX-preview-setup)
   (setq-default preview-scale 1.4
 		preview-scale-function
 		(lambda () (* (/ 10.0 (preview-document-pt)) preview-scale))))
