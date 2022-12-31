@@ -3,7 +3,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-dracula t)
+  (load-theme 'doom-one t)
   (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
   (set-face-attribute 'font-lock-keyword-face nil :slant 'italic))
 
@@ -14,9 +14,9 @@
 
 (set-face-attribute
  'default nil
- :family "Victor Mono"
+ :family "Berkeley Mono"
  :weight 'regular
- :height 90)
+ :height 130)
 
 (use-package solaire-mode
   :straight t

@@ -59,6 +59,6 @@
     "dsls.el"
     "nix.el"
     ;; "js.el"
-    "haskell.el"
+    ;; "haskell.el"
     "latex.el"
     )))
