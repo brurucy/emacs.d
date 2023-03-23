@@ -1,5 +1,6 @@
-(use-package eglot
-  :straight t)
+(use-package yasnippet
+  :straight t
+  :init
+  (yas-global-mode 1))
 
-(use-package consult-eglot
-  :straight t)
+

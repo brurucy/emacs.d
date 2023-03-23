@@ -43,3 +43,11 @@
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (projectile-mode +1))
+
+(use-package treemacs
+  :straight t
+  :defer t)
+
+(use-package treemacs-projectile
+  :straight t
+  :after(treemacs projectile))

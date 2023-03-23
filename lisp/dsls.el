@@ -1,7 +1,3 @@
-(use-package protobuf-mode
-  :straight t
-  :defer t)
-
 (use-package docker-compose-mode
   :straight t
   :defer t)
