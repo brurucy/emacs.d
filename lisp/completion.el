@@ -5,22 +5,17 @@
   (prescient-persist-mode +1)
   (setq prescient-history-length 1000))
 
-(use-package selectrum
-  :straight (:host github :repo "radian-software/selectrum")
-  :defer t
-  :init
-  (selectrum-mode +1)
-  (custom-set-faces
- '(selectrum-current-candidate ((t (:foreground "#c678dd"))))
- '(selectrum-group-title ((t :inherit :slant :italic (:foreground "#c678dd"))))))
-
-(use-package selectrum-prescient
+(use-package corfu-prescient
   :straight (:host github :repo "radian-software/prescient.el"
-		   :files ("selectrum-prescient.el"))
-  :demand t
-  :after selectrum
+		   :files ("corfu-prescient.el"))
   :config
-  (selectrum-prescient-mode +1))
+  (corfu-prescient-mode +1))
+
+(use-package vertico-prescient
+  :straight (:host github :repo "radian-software/prescient.el"
+		   :files ("vertico-prescient.el"))
+  :config
+  (vertico-prescient-mode +1))
 
 (use-package vertico
   :straight t
