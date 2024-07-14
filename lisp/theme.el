@@ -12,6 +12,7 @@
   (load-theme 'doom-one t))
 
 (elpaca doom-modeline
+  (setq doom-modeline-icon nil)
   (add-hook 'elpaca-after-init-hook 'doom-modeline-mode))
 
 (elpaca solaire-mode

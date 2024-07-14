@@ -10,7 +10,6 @@
 (global-display-line-numbers-mode +1)
 
 (setq read-process-output-max (* 100 1024 1024))
-(setq straight-check-for-modifications nil)
 
 (setq warning-minimum-level :error)
 
@@ -73,18 +72,13 @@
     "completion.el"
     "git_utilities.el"
     "formatting.el"
+    "linting.el"
+    "consult.el"
     "rust.el"
+    "python.el"
     "nix.el"
+    "ts_and_js.el"
     )))
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(package-selected-packages '(eglot esup exec-path-from-shell)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(marginalia-documentation ((t (:slant italic :inherit completions-annotations :foreground "#c678dd")))))
