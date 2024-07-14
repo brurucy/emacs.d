@@ -6,7 +6,7 @@
 
 (elpaca doom-themes
   (setq doom-themes-enable-bold t
-	doom-themes-enable-italic t)
+	    doom-themes-enable-italic t)
   (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
   (set-face-attribute 'font-lock-keyword-face nil :slant 'italic)
   (load-theme 'doom-one t))
