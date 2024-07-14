@@ -1,0 +1,13 @@
+.cache
+.mc-lists.el
+auto-save-list
+*~
+eln-cache
+elpa
+elpaca
+eshell
+projectile-bookmarks.eld
+projects
+transient
+tree-sitter
+var
