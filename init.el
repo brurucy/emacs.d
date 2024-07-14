@@ -67,6 +67,7 @@
  (mapcar
   (lambda (x) (concat "~/.emacs.d/lisp/" x))
   ( list
+    "treesitter_runtime_setup.el"
     "theme.el"
     "command_palette.el"
     "completion.el"
@@ -78,6 +79,7 @@
     "python.el"
     "nix.el"
     "ts_and_js.el"
+    "verilog.el"
     )))
 
 (custom-set-variables
