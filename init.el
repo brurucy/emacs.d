@@ -58,9 +58,11 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
-(elpaca exec-path-from-shell (exec-path-from-shell-initialize))
+(elpaca exec-path-from-shell (add-hook 'elpaca-after-init-hook 'exec-path-from-shell-initialize))
 (elpaca esup)
 (elpaca gcmh (add-hook 'elpaca-after-init-hook 'gcmh-mode))
+
+(elpaca evil (add-hook 'elpaca-after-init-hook 'evil-mode))
 
 (mapc
  (lambda (x) (load x))
@@ -75,12 +77,10 @@
     "formatting.el"
     "linting.el"
     "consult.el"
+    "edit_chrome_with_emacs.el"
     "rust.el"
     "python.el"
     "nix.el"
     "ts_and_js.el"
     "verilog.el"
     )))
-
-(custom-set-variables
- '(package-selected-packages '(eglot esup exec-path-from-shell)))
