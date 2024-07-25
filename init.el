@@ -77,7 +77,6 @@
     "formatting.el"
     "linting.el"
     "consult.el"
-    "edit_chrome_with_emacs.el"
     "rust.el"
     "python.el"
     "nix.el"
