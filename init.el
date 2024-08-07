@@ -11,8 +11,6 @@
 
 (setq read-process-output-max (* 100 1024 1024))
 
-(setq warning-minimum-level :error)
-
 (defvar elpaca-installer-version 0.7)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
 (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
@@ -67,7 +65,7 @@
 (mapc
  (lambda (x) (load x))
  (mapcar
-  (lambda (x) (concat "~/.emacs.d/lisp/" x))
+  (lambda (x) (concat "/Users/bruno.rucy/.emacs.d/lisp/" x))
   ( list
     "treesitter_runtime_setup.el"
     "theme.el"
@@ -76,10 +74,12 @@
     "git_utilities.el"
     "formatting.el"
     "linting.el"
+    "lsp.el"
     "consult.el"
     "rust.el"
     "python.el"
     "nix.el"
     "ts_and_js.el"
     "verilog.el"
+    "markdown.el"
     )))
